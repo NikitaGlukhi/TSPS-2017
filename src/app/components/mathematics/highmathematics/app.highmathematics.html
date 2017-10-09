@@ -1,0 +1,15 @@
+<h2 style="text-align: center">Высшая математика</h2>
+
+<form (ngSubmit)="Func(TaskForm)" #TaskForm="ngForm">
+  <h2>В каждом задании может быть только ОДИН вариант ответа. Удачи</h2>
+
+  <h3>Задание 1</h3>
+  <p><b>Найти точку пересечения прямых х + у – 3 = 0 и 2х + 3у – 8 = 0.</b></p>
+  <p><input type="radio" name="answer1" [formControl]="searchControl1" value="1">(2; 1)</p>
+  <p><input type="radio" name="answer1" [formControl]="searchControl1" value="2">(-1; -2)</p>
+  <p><input type="radio" name="answer1" [formControl]="searchControl1" value="3">(3; 2)</p>
+  <p><input type="radio" name="answer1" [formControl]="searchControl1" value="4">(1; 2)</p>
+  <p><input type="radio" name="answer1" [formControl]="searchControl1" value="5">(-2; 3)</p>
+
+  <button (click)="Func()" type="submit" class="btn btn-default">Проверить</button>
+</form>
