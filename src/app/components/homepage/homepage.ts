@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'homepage',
+  selector: 'app-homepage',
   template: `
     <h2 style="text-align: center"><p>Добро пожаловать!</p></h2> `
 })

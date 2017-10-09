@@ -17,7 +17,7 @@ export class AuthService {
   loggedIn$ = new BehaviorSubject<boolean>(this.loggedIn);
 
   constructor(private router: Router) {
-    if(this.authenticated) {
+    if (this.authenticated) {
       this.setLoggedIn(true)
     }
   }
@@ -28,6 +28,49 @@ export class AuthService {
   }
 
   login() {
-    this.auth0.authorize
+    this.auth0.authorize({
+      responseType: 'token id_token',
+      redirectUrl: AUTH_CONFIG.REDIRECT,
+      audience: AUTH_CONFIG.AUDIENCE,
+      scope: AUTH_CONFIG.SCOPE
+    })
+  }
+
+  handleAuth() {
+    this.auth0.parseHash((err, authResult) => {
+      if (authResult && authResult.accessToken && authResult.idToken) {
+        window.location.hash = '';
+        this._getProfile(authResult);
+        this.router.navigate(['/']);
+      } else if (err) {
+        this.router.navigate(['/']);
+        console.error(`Error: ${err.error}`)
+      }
+    })
+  }
+
+  private _getProfile(authResult) {
+    this.auth0.client.userInfo(authResult.accessToken, (err, profile) => {
+      this._setSession(authResult, profile);
+    });
+  }
+
+  private _setSession(authResult, profile) {
+    localStorage.setItem('token', authResult.accessToken);
+    localStorage.setItem('id_token', authResult.idToken);
+    localStorage.setItem('profile', JSON.stringify(profile));
+    this.setLoggedIn(true);
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('id_token');
+    localStorage.removeItem('profile');
+    this.router.navigate(['/']);
+    this.setLoggedIn(false);
+  }
+
+  get authenticated() {
+    return tokenNotExpired('token');
   }
 }
