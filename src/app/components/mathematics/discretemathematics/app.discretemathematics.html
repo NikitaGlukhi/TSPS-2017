@@ -1,0 +1,65 @@
+<h2 style="text-align: center">Дискретная математика</h2>
+<form (ngSubmit)="Func1(TaskForm)" #TaskForm="ngForm">
+  <h2>В каждом задании может быть только ОДИН вариант ответа. Удачи</h2>
+
+  <h3>Задание 1</h3>
+  <p><b>Дано универсальное множество U = &#123; 1, 2, 3, 4, 5, 6, 7 &#125; и в нем подмножества B = &#123; 2, 4, 5, 6 &#125;, C = &#123; 1, 3, 5, 6 &#125;. Найти декартово(прямое) произведение D &#215; A, где D = B - A.</b></p>
+  <p>
+    <input type="radio" name="answer8" [formControl]="searchControl8" value="1">&#123;(1, 1, 3, 3, 5, 6)&#125;
+    <input type="radio" name="answer8" [formControl]="searchControl8" value="2">&#123;(1, 1), (3, 1), (1, 3), (3, 3), (1, 5), (3, 5), (1, 6), (3, 6)&#125;
+    <input type="radio" name="answer8" [formControl]="searchControl8" value="3">&#123;(1, 1), (1, 3), (3, 3), (1, 5), (3, 5), (1, 6), (3, 6)&#125;
+    <input type="radio" name="answer8" [formControl]="searchControl8" value="4">&#123;(1, 3), (1, 5), (3, 5), (1, 6), (3, 6)&#125;
+    <input type="radio" name="answer8" [formControl]="searchControl8" value="5">&#123;(1, 3, 5, 6)&#125;
+  </p>
+
+  <h3>Задание 2</h3>
+  <p><b>Cколькими способами можно разделить 5 различных карандашей между двумя школьниками так, чтобы у каждого был хотя бы один карандаш?</b></p>
+  <p>
+    <input type="radio" name="answer9" [formControl]="searchControl9" value="1">5
+    <input type="radio" name="answer9" [formControl]="searchControl9" value="2">20
+    <input type="radio" name="answer9" [formControl]="searchControl9" value="3">15
+    <input type="radio" name="answer9" [formControl]="searchControl9" value="4">10
+    <input type="radio" name="answer9" [formControl]="searchControl9" value="5">30
+  </p>
+
+  <h3>Задание 3</h3>
+  <p><b>Граф G задан следующей матрицей смежности:
+  <p>0 0 1 1 0 1 0 0</p>
+  <p>0 0 1 1 1 0 0 0</p>
+  <p>1 1 0 0 0 0 0 1</p>
+  <p>1 1 0 0 0 0 1 0</p>
+  <p>0 1 0 0 0 0 1 0</p>
+  <p>1 0 0 0 0 0 0 1</p>
+  <p>0 0 0 1 1 0 0 0</p>
+  <p>0 0 1 0 0 1 0 0</p>
+  Найти диаметр d(G) графа
+  </b></p>
+  <p>
+    <input type="radio" name="answer10" [formControl]="searchControl10" value="1">3
+    <input type="radio" name="answer10" [formControl]="searchControl10" value="2">2
+    <input type="radio" name="answer10" [formControl]="searchControl10" value="3">4
+    <input type="radio" name="answer10" [formControl]="searchControl10" value="4">6
+    <input type="radio" name="answer10" [formControl]="searchControl10" value="5">5
+  </p>
+
+  <h3>Задание 4</h3>
+  <p><b>Сколько существует неизоморфных деревьев с 6 вершинами?</b></p>
+  <p>
+    <input type="radio" name="answer11" [formControl]="searchControl11" value="1">5
+    <input type="radio" name="answer11" [formControl]="searchControl11" value="2">2
+    <input type="radio" name="answer11" [formControl]="searchControl11" value="3">3
+    <input type="radio" name="answer11" [formControl]="searchControl11" value="4">6
+    <input type="radio" name="answer11" [formControl]="searchControl11" value="5">4
+  </p>
+
+  <h3>Задание 5</h3>
+  <p><b>Для функции &#402;, заданной вектором &#945;<sub><small>&#402;</small></sub> = (1011) определить, являеттся ли она: </b></p>
+  <p>
+    <input type="radio" name="answer12" [formControl]="searchControl12" value="1">Функцией из класса Т<sub><small>0</small></sub>
+    <input type="radio" name="answer12" [formControl]="searchControl12" value="2">Функцией из класса Т<sub><small>1</small></sub>
+    <input type="radio" name="answer12" [formControl]="searchControl12" value="3">Самодвойственной
+    <input type="radio" name="answer12" [formControl]="searchControl12" value="4">Линейной
+    <input type="radio" name="answer12" [formControl]="searchControl12" value="5">Монотонной
+  </p>
+  <button (click)="Func1()" type="submit" class="btn btn-default">Проверить</button>
+</form>

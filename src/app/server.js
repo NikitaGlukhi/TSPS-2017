@@ -24,4 +24,4 @@ const authCheck = jwt({
 });
 
 app.listen(port);
-console.log('Server started! Please, check this address localhost:3001');
+console.log('Server started! Please, check this address: localhost:3001');

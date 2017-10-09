@@ -87,7 +87,7 @@ export class HighMathematicsComponent implements OnInit {
       console.log('Неправильно');
     }
 
-    if (this.res >= 5) {
+    if (this.res >= 4) {
       alert('Тест сдан!');
     } else {
       alert('Тест не сдан');

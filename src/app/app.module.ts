@@ -11,6 +11,8 @@ import { HighMathResultsComponent } from './components/results/highmath_result/h
 import { AuthService } from './authservice/auth.service';
 import { CallbackComponent } from './callback';
 import { AuthGuard } from './authservice/auth-guard.service';
+import { DiscretemathematicsComponent } from './components/mathematics/discretemathematics/discretemathematics';
+import { DiscreteMathResultsComponent } from './components/results/discretemath_result/discretemath_result';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { AuthGuard } from './authservice/auth-guard.service';
     SubjectsComponent,
     HighMathematicsComponent,
     HighMathResultsComponent,
+    DiscretemathematicsComponent,
+    DiscreteMathResultsComponent,
     CallbackComponent
   ],
   imports: [
