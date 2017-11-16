@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-discrete-mathematics',
-  templateUrl: 'app.discretemathematics.html',
+  templateUrl: './app.discretemathematics.html',
 })
 
 export class DiscretemathematicsComponent implements OnInit {

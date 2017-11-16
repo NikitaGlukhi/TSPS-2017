@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-discrete-mathematics-results',
-  templateUrl: './app,discretemath_result.html'
+  templateUrl: './app.discretemath_result.html'
 })
 
 export class DiscreteMathResultsComponent implements OnInit {

@@ -12,6 +12,7 @@ export class AuthGuard implements CanActivate {
   canActivate() {
     if (!this.auth.authenticated) {
       this.router.navigate(['']);
+      alert('Пожалуйста пройдите авторизацию, прежде чем приступить к выполнению');
       return false;
     }
     return true;
